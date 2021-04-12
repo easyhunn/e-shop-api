@@ -1,0 +1,15 @@
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\MISA.VMHUNG.Core.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.csprojAssemblyReference.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.AssemblyInfoInputs.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.AssemblyInfo.cs
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\MISA.VMHUNG.Infrastructure.deps.json
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\MISA.VMHUNG.Infrastructure.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\ref\MISA.VMHUNG.Infrastructure.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\MISA.VMHUNG.Infrastructure.pdb
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\bin\Debug\net5.0\MISA.VMHUNG.Core.pdb
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.csproj.CopyComplete
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\ref\MISA.VMHUNG.Infrastructure.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Infrastructure\obj\Debug\net5.0\MISA.VMHUNG.Infrastructure.pdb

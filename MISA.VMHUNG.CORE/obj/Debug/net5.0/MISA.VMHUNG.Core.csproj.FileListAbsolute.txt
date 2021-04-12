@@ -1,0 +1,14 @@
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\bin\Debug\net5.0\MISA.VMHUNG.Core.deps.json
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\bin\Debug\net5.0\MISA.VMHUNG.Core.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\bin\Debug\net5.0\ref\MISA.VMHUNG.Core.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\bin\Debug\net5.0\MISA.VMHUNG.Core.pdb
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.csprojAssemblyReference.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.Properties.Resources.resources
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.csproj.GenerateResource.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.AssemblyInfoInputs.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.AssemblyInfo.cs
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.csproj.CoreCompileInputs.cache
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\ref\MISA.VMHUNG.Core.dll
+D:\Code\BTL\MISA.VMHUNG.ESHOP\MISA.VMHUNG.Core\obj\Debug\net5.0\MISA.VMHUNG.Core.pdb
