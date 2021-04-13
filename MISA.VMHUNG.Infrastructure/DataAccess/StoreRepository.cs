@@ -55,5 +55,13 @@ namespace MISA.VMHUNG.Infrastructure.DataAccess
             int numberStores = dbConnection.ExecuteScalar<int>($"Proc_GetCountStores", commandType: CommandType.StoredProcedure);
             return numberStores;
         }
+
+        public Store GetStoreByStoreCode(string storeCode)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add($"@StoreCode", storeCode, DbType.String);
+            var entity = dbConnection.Query<Store>($"Proc_GetStoreByStoreCode", parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return entity;
+        }
     }
 }

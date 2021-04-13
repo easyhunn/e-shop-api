@@ -89,5 +89,7 @@ namespace MISA.VMHUNG.Core.Interface
         /// </returns>
         /// CreatedBy: VM Hùng (13/04/2021)
         int GetCountStores();
+
+
     }
 }

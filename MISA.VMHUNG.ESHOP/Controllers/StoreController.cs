@@ -31,6 +31,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// 200: thành công
         /// 204: Không lấy được dữ liệu
         /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpDelete("{storeId}")]
         public IActionResult DeleteEntity(Guid storeId)
         {
@@ -50,17 +51,43 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// <summary>
         /// Cập nhật thông tin cửa hàng
         /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
+        /// <param name="store">
+        /// Thông tin cửa hàng
+        /// </param>
+        /// <param name="storeId">
+        /// Mã id của cửa hàng
+        /// </param>
+        /// <returns>
+        /// 200: Nếu cập nhật thành công
+        /// 204: Nếu không có bản ghi nào được cập nhật
+        /// 400: Nếu trường thông tin bị sai
+        /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpPut("{storeId}")]
         public IActionResult UpdateEntity([FromBody] Store store, Guid storeId)
         {
 
             var res = _storeService.UpdateStore(store, storeId);
             if (res.isSuccess) return Ok(res.userMsg);
-            else return StatusCode(204, res);
+            else
+            {
+                if (res.errorCode == MISAError.badRequest)
+                    return StatusCode(400, res);
+                else return StatusCode(204, res);
+            }
         }
-
+        /// <summary>
+        /// Thêm mới 1 cửa hàng
+        /// </summary>
+        /// <param name="store">
+        /// cửa hàng
+        /// </param>
+        /// <returns>
+        /// 201: Nếu thêm cửa hàng thành công
+        /// 400: Nếu thông tin đầu vào bị sai
+        /// 200: Không có bản ghi nào được thêm
+        /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpPost]
         public IActionResult InsertEntity(Store store)
         {
@@ -93,6 +120,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// 200: Nếu lấy được dánh sách cửa hàng
         /// 204: Nếu không có dữ liệu được lấy về
         /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpGet("Filter")]
 
         public IActionResult GetStoreFilter(String storeCode, String storeName, String address, String phoneNumber)
@@ -121,6 +149,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// 200: nếu lấy bản ghi thành công
         /// 204: Nếu không lấy được bản ghi nào
         /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpGet("Page")]
         public IActionResult GetStoreByIndexOffset(int positionStart, int offSet) 
         {
@@ -140,11 +169,13 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// <returns>
         /// Số lượng bản ghi cửa hàng trong database
         /// </returns>
+        /// Created By:VM Hùng (13/04/2021)
         [HttpGet("StoresQuantity")]
 
         public int GetCountStores()
         {
             return _storeService.GetCountStores();
         }
+
     }
 }

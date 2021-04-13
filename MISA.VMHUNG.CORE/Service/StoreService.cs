@@ -69,9 +69,10 @@ namespace MISA.VMHUNG.Core.Service
         public ServiceResult InsertStore(Store store)
         {
             serviceResult.isSuccess = true;
-            //check trùng mã
+            //kiêm tra thông tin cửa hàng
             if (!ValidateEntity(store))
             {
+                serviceResult.isSuccess = false;
                 return serviceResult;
             }
             //Thêm mới cửa hàng
@@ -96,6 +97,12 @@ namespace MISA.VMHUNG.Core.Service
         public ServiceResult UpdateStore(Store store, Guid storeId)
         {
             serviceResult.isSuccess = true;
+            //Kiểm tra đầy đủ trường
+            if (!ValidateInformation(store))
+            {
+                serviceResult.isSuccess = false;
+                return serviceResult;
+            }
             //Thực hiện update
             var res = _storeRepository.UpdateStore(storeId, store);
             //kiểm tra số lượng bản ghi được update
@@ -120,9 +127,68 @@ namespace MISA.VMHUNG.Core.Service
             int storeQuantity = _storeRepository.GetCountStores();
             return storeQuantity;
         }
+        /// <summary>
+        /// kiểm tra tính hợp lệ của thông tin
+        /// </summary>
+        /// <param name="store"></param>
+        /// <returns>
+        /// True: Nếu thông tin hợp lệ
+        /// False: nếu thông tin không hợp lệ
+        /// </returns>
         public bool ValidateEntity(Store store)
         {
+            //check đủ thông tin bắt buộc
+            if (!ValidateInformation(store)) return false;
+
+            // check trùng mã
+            if (!isValidCode(store.StoreCode)) return false;
             return true;
         }
+        /// <summary>
+        /// Kiểm tra đầy đủ thông tin bắt buộc
+        /// </summary>
+        /// <param name="store">
+        /// Thông tin cửa hàng
+        /// </param>
+        /// <returns>
+        /// True: Nếu thống tin đủ
+        /// False: Nếu có trường thông tin bắt buộc bị trống
+        /// </returns>
+        public bool ValidateInformation (Store store)
+        {
+            if (store.StoreName == null || store.StoreName == "")
+            {
+                serviceResult.userMsg = Properties.Resources.Empty_StoreName;
+                serviceResult.errorCode = MISAError.badRequest;
+                return false;
+            }
+
+            if (store.StoreCode == null || store.StoreCode == "")
+            {
+                serviceResult.userMsg = Properties.Resources.Empty_StoreCode;
+                serviceResult.errorCode = MISAError.badRequest;
+                return false;
+            }
+            if (store.Address == null || store.Address == "")
+            {
+                serviceResult.userMsg = Properties.Resources.Empty_Address;
+                serviceResult.errorCode = MISAError.badRequest;
+                return false;
+            }
+            return true;
+        }
+
+        public bool isValidCode (String storeCode)
+        {
+            Store store = _storeRepository.GetStoreByStoreCode(storeCode);
+            if (store != null)
+            {
+                serviceResult.errorCode = MISAError.badRequest;
+                serviceResult.userMsg = Properties.Resources.Duplicate_StoreCode;
+                return false;
+            }
+            return true;
+        }
+
     }
 }

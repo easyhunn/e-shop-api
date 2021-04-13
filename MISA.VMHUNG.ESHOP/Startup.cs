@@ -39,6 +39,15 @@ namespace MISA.VMHUNG.ESHOP
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped(typeof(IStoreRepository), typeof(StoreRepository));
             services.AddScoped(typeof(IStoreService), typeof(StoreService));
+            services.AddScoped(typeof(IProvinceRepository), typeof(ProvinceRepository));
+            services.AddScoped(typeof(IProvinceService), typeof(ProvinceService));
+            services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository));
+            services.AddScoped(typeof(ICountryService), typeof(CountryService));
+            services.AddScoped(typeof(IDistrictRepository), typeof(DistrictRepository));
+            services.AddScoped(typeof(IDistrictService), typeof(DistrictRepository));
+            services.AddScoped(typeof(IWardRepository), typeof(WardRepository));
+            services.AddScoped(typeof(IWardService), typeof(WardService));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.VMHUNG.ESHOP", Version = "v1" });
