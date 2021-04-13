@@ -61,6 +61,42 @@ namespace MISA.VMHUNG.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mã khách hàng đã tồn tại!.
+        /// </summary>
+        public static string Duplicate_StoreCode {
+            get {
+                return ResourceManager.GetString("Duplicate_StoreCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Địa chỉ không được phép để trống.
+        /// </summary>
+        public static string Empty_Address {
+            get {
+                return ResourceManager.GetString("Empty_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mã cửa hàng không được phép để trống.
+        /// </summary>
+        public static string Empty_StoreCode {
+            get {
+                return ResourceManager.GetString("Empty_StoreCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tên cửa hàng không được phép để trống.
+        /// </summary>
+        public static string Empty_StoreName {
+            get {
+                return ResourceManager.GetString("Empty_StoreName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Không có bản ghi nào được xoá.
         /// </summary>
         public static string Msg_CantDelete {
@@ -75,6 +111,15 @@ namespace MISA.VMHUNG.Core.Properties {
         public static string Msg_DeleteSuccess {
             get {
                 return ResourceManager.GetString("Msg_DeleteSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thêm thành công!.
+        /// </summary>
+        public static string Msg_InsertSuccess {
+            get {
+                return ResourceManager.GetString("Msg_InsertSuccess", resourceCulture);
             }
         }
         

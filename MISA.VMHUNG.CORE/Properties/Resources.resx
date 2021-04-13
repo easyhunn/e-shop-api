@@ -123,6 +123,9 @@
   <data name="Msg_DeleteSuccess" xml:space="preserve">
     <value>Xoá thành công !</value>
   </data>
+  <data name="Msg_InsertSuccess" xml:space="preserve">
+    <value>Thêm thành công!</value>
+  </data>
   <data name="Msg_NoContent" xml:space="preserve">
     <value>Không tìm thấy bản ghi nào</value>
   </data>

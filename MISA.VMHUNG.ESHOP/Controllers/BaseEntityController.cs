@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MISA.VMHUNG.ESHOP.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class BaseEntityController<Entity> : ControllerBase
     {

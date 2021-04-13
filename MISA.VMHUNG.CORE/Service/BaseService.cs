@@ -11,9 +11,11 @@ namespace MISA.VMHUNG.Core.Service
     public class BaseService<MISAEntity> : IBaseService<MISAEntity>
     {
         IBaseRepository<MISAEntity> _baseRepository;
+        protected ServiceResult serviceResult;
         public BaseService(IBaseRepository<MISAEntity> baseRepository)
         {
             this._baseRepository = baseRepository;
+            serviceResult = new ServiceResult();
         }
         /// <summary>
         /// Lấy thông tin tất cả khách hàng
@@ -24,8 +26,7 @@ namespace MISA.VMHUNG.Core.Service
         public ServiceResult GetAll()
         {
             // Lấy tất cả bản ghi
-
-            ServiceResult serviceResult = new ServiceResult();
+            serviceResult.isSuccess = true;
             var customers = _baseRepository.GetAll();
 
             // Kiểm tra số lượng bản ghi trả về
@@ -47,8 +48,9 @@ namespace MISA.VMHUNG.Core.Service
 
         public ServiceResult GetById(Guid id)
         {
+            serviceResult.isSuccess = true;
             //Lấy dữ dữ liệu
-            ServiceResult serviceResult = new ServiceResult();
+
             var entity = _baseRepository.GetById(id);
             //Kiểm trả bản ghi có tồn tại không
             if (entity == null)

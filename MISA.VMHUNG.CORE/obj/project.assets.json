@@ -78,25 +78,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hungv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\vmhung\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\BTL\\MISA.VMHUNG.ESHOP\\MISA.VMHUNG.Core\\MISA.VMHUNG.Core.csproj",
+      "projectUniqueName": "F:\\vmhung\\BTL\\e-shop-api\\MISA.VMHUNG.Core\\MISA.VMHUNG.Core.csproj",
       "projectName": "MISA.VMHUNG.Core",
-      "projectPath": "D:\\Code\\BTL\\MISA.VMHUNG.ESHOP\\MISA.VMHUNG.Core\\MISA.VMHUNG.Core.csproj",
-      "packagesPath": "C:\\Users\\hungv\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\BTL\\MISA.VMHUNG.ESHOP\\MISA.VMHUNG.Core\\obj\\",
+      "projectPath": "F:\\vmhung\\BTL\\e-shop-api\\MISA.VMHUNG.Core\\MISA.VMHUNG.Core.csproj",
+      "packagesPath": "C:\\Users\\vmhung\\.nuget\\packages\\",
+      "outputPath": "F:\\vmhung\\BTL\\e-shop-api\\MISA.VMHUNG.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hungv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\vmhung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -145,7 +140,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -37,6 +37,8 @@ namespace MISA.VMHUNG.ESHOP
             );
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(IStoreRepository), typeof(StoreRepository));
+            services.AddScoped(typeof(IStoreService), typeof(StoreService));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.VMHUNG.ESHOP", Version = "v1" });
