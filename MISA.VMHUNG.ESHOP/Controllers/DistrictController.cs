@@ -13,7 +13,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
     [ApiController]
     public class DistrictController : BaseEntityController<District>
     {
-        public DistrictController (IBaseService<District> baseService):base(baseService)
+        public DistrictController (IDistrictService districtService):base(districtService)
         {
 
         }

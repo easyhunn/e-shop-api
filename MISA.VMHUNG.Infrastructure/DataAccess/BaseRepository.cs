@@ -20,7 +20,7 @@ namespace MISA.VMHUNG.Infrastructure.DataAccess
         {
             _connectionString = "UserID = dev; " +
                 "Host=47.241.69.179; " +
-                "DataBase=TEST.MISA.eShop; " +
+                "DataBase= MF760_VMHUNG_eshop; " +
                 "port=3306;" +
                 "password=12345678;";
             this._className = typeof(MISAEntity).Name;

@@ -44,7 +44,7 @@ namespace MISA.VMHUNG.ESHOP
             services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository));
             services.AddScoped(typeof(ICountryService), typeof(CountryService));
             services.AddScoped(typeof(IDistrictRepository), typeof(DistrictRepository));
-            services.AddScoped(typeof(IDistrictService), typeof(DistrictRepository));
+            services.AddScoped(typeof(IDistrictService), typeof(DistrictService));
             services.AddScoped(typeof(IWardRepository), typeof(WardRepository));
             services.AddScoped(typeof(IWardService), typeof(WardService));
 

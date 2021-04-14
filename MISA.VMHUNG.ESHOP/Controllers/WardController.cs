@@ -13,7 +13,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
     [ApiController]
     public class WardController : BaseEntityController<Ward>
     {
-        public WardController(IBaseService<Ward> baseService) : base(baseService)
+        public WardController(IWardService wardService) : base(wardService)
         {
 
         }

@@ -13,7 +13,7 @@ namespace MISA.VMHUNG.ESHOP.Controllers
     [ApiController]
     public class CountryController : BaseEntityController<Country>
     {   
-        public CountryController(IBaseService<Country> baseService):base(baseService)
+        public CountryController(ICountryService countryService):base(countryService)
         {
             
         }

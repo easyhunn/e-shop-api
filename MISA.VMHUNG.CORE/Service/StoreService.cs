@@ -70,7 +70,7 @@ namespace MISA.VMHUNG.Core.Service
         {
             serviceResult.isSuccess = true;
             //kiêm tra thông tin cửa hàng
-            if (!ValidateEntity(store))
+            if (!ValidateEntity(store, null))
             {
                 serviceResult.isSuccess = false;
                 return serviceResult;
@@ -97,9 +97,9 @@ namespace MISA.VMHUNG.Core.Service
         public ServiceResult UpdateStore(Store store, Guid storeId)
         {
             serviceResult.isSuccess = true;
-            //Kiểm tra đầy đủ trường
-            if (!ValidateInformation(store))
-            {
+            // kiểm tra dữ liệu
+            if (!ValidateEntity(store, storeId))
+            {   
                 serviceResult.isSuccess = false;
                 return serviceResult;
             }
@@ -135,13 +135,13 @@ namespace MISA.VMHUNG.Core.Service
         /// True: Nếu thông tin hợp lệ
         /// False: nếu thông tin không hợp lệ
         /// </returns>
-        public bool ValidateEntity(Store store)
+        public bool ValidateEntity(Store store, Guid? id)
         {
             //check đủ thông tin bắt buộc
             if (!ValidateInformation(store)) return false;
 
             // check trùng mã
-            if (!isValidCode(store.StoreCode)) return false;
+            if (!isValidCode(store.StoreCode, id)) return false;
             return true;
         }
         /// <summary>
@@ -178,10 +178,10 @@ namespace MISA.VMHUNG.Core.Service
             return true;
         }
 
-        public bool isValidCode (String storeCode)
+        public bool isValidCode (String storeCode , Guid? id)
         {
             Store store = _storeRepository.GetStoreByStoreCode(storeCode);
-            if (store != null)
+            if (store != null && store.StoreId != id)
             {
                 serviceResult.errorCode = MISAError.badRequest;
                 serviceResult.userMsg = Properties.Resources.Duplicate_StoreCode;
