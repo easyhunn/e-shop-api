@@ -36,7 +36,7 @@ namespace MISA.VMHUNG.Core.Service
         {
             serviceResult.isSuccess = true;
             var stores = _storeRepository.GetStoreByIndexOffset(positionStart, offSet);
-            if (stores == null)
+            if (stores.Count() == 0)
             {
 
                 serviceResult.devMsg = Properties.Resources.Msg_NoContent;
@@ -54,12 +54,13 @@ namespace MISA.VMHUNG.Core.Service
             serviceResult.isSuccess = true;
             var stores = _storeRepository.GetStoreFilter(storeFilter);
             //Nếu không tồn tại bản ghi nào
-            if (stores == null)
+            if (stores.Count() == 0)
             {
 
                 serviceResult.devMsg = Properties.Resources.Msg_NoContent;
                 serviceResult.isSuccess = false;
                 serviceResult.userMsg = Properties.Resources.Msg_NoContent;
+                return serviceResult;
             }
 
             serviceResult.data = stores;

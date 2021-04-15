@@ -123,13 +123,14 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// Created By:VM Hùng (13/04/2021)
         [HttpGet("Filter")]
 
-        public IActionResult GetStoreFilter(String storeCode, String storeName, String address, String phoneNumber)
+        public IActionResult GetStoreFilter(String storeCode, String storeName, String address, String phoneNumber, int status)
         {
             var storeFilter = new StoreFilter();
             storeFilter.StoreCode = storeCode;
             storeFilter.StoreName = storeName;
             storeFilter.Address = address;
             storeFilter.PhoneNumber = phoneNumber;
+            storeFilter.Status = status;
             ServiceResult res = _storeService.GetStoreFilter(storeFilter);
             if (res.isSuccess)
             {
