@@ -86,10 +86,22 @@ namespace MISA.VMHUNG.Core.Interface
         /// </summary>
         /// <returns>
         /// Trả về số lượng cửa hàng
+        /// 204 Nếu không có cửa hàng nào
         /// </returns>
         /// CreatedBy: VM Hùng (13/04/2021)
-        int GetCountStores();
-
+        ServiceResult GetCountStores();
+        /// <summary>
+        /// Lấy thông tin cửa hàng theo mã cửa hàng
+        /// </summary>
+        /// <param name="storeCode">
+        /// Mã cửa hàng
+        /// </param>
+        /// <returns>
+        /// 200: nếu cửa hàng tồn tại
+        /// 204: Nếu không có cửa hàng nào tồn tại
+        /// </returns>
+        /// CreatedBy: VM Hùng (16/04/2021)
+        ServiceResult GetStoreByStoreCode(String storeCode);
 
     }
 }

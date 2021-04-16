@@ -168,15 +168,39 @@ namespace MISA.VMHUNG.ESHOP.Controllers
         /// Lấy số lượng cửa hàng hiện có trong database
         /// </summary>
         /// <returns>
-        /// Số lượng bản ghi cửa hàng trong database
+        /// 200: Số lượng bản ghi cửa hàng trong database
+        /// 204: Không có bản ghi nào được trả vê
         /// </returns>
         /// Created By:VM Hùng (13/04/2021)
         [HttpGet("StoresQuantity")]
 
-        public int GetCountStores()
+        public IActionResult GetCountStores()
         {
-            return _storeService.GetCountStores();
+            var res = _storeService.GetCountStores();
+            if( !res.isSuccess)
+            {
+                return StatusCode(204, res);
+            }
+            else
+            {
+                return StatusCode(200, res.data);
+            }
         }
+        /// <summary>
+        /// Lấy thông tin cửa hàng theo mã cửa hàng
+        /// </summary>
+        /// <param name="storeCode">
+        /// Mã cửa hàng
+        /// </param>
+        /// <returns>
 
+        /// 200:
+        /// </returns>
+        [HttpGet("StoreCode/{storeCode}")]
+        public IActionResult GetStoreByStoreCode(String storeCode)
+        {
+            var res = _storeService.GetStoreByStoreCode(storeCode);
+            return Ok(res.data);
+        }
     }
 }

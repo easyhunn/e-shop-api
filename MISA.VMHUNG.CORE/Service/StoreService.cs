@@ -123,11 +123,42 @@ namespace MISA.VMHUNG.Core.Service
             return serviceResult;
         }
 
-        public int GetCountStores()
+        public ServiceResult GetCountStores()
         {
             int storeQuantity = _storeRepository.GetCountStores();
-            return storeQuantity;
+            if (storeQuantity <= 0)
+            {
+                serviceResult.userMsg = Properties.Resources.Msg_NoContent;
+                return serviceResult;
+            }
+            serviceResult.data = storeQuantity;
+            return serviceResult;
         }
+        public ServiceResult GetStoreByStoreCode(string storeCode)
+        {
+            serviceResult.isSuccess = true;
+            //Lấy dữ dữ liệu
+
+            var store = _storeRepository.GetStoreByStoreCode(storeCode);
+            //Kiểm trả bản ghi có tồn tại không
+            if (store == null )
+            {
+                //Nếu không có bản ghi trả về
+                serviceResult.isSuccess = false;
+                serviceResult.devMsg = Properties.Resources.Msg_NoContent;
+                serviceResult.userMsg = Properties.Resources.User_MsgError;
+                serviceResult.errorCode = MISAError.noContent;
+            }
+            else
+            {
+                serviceResult.data = store;
+                serviceResult.devMsg = Properties.Resources.Msg_Success;
+            }
+            return serviceResult;
+        }
+
+
+        #region check nghiệp vụ
         /// <summary>
         /// kiểm tra tính hợp lệ của thông tin
         /// </summary>
@@ -191,5 +222,6 @@ namespace MISA.VMHUNG.Core.Service
             return true;
         }
 
+        #endregion
     }
 }
